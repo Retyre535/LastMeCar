@@ -28,20 +28,27 @@ public class NotificationsFragment extends Fragment {
         View root = binding.getRoot();
         List<String> data = new ArrayList<>();
         List<Integer> checked = new ArrayList<>();
+        List<Integer> element = new ArrayList<>();
         data.add("Controller (Arduino UNO)");
         checked.add(2);
+        element.add(0);
         data.add("Engines");
         checked.add(2);
+        element.add(0);
         data.add("Batteries");
         checked.add(2);
+        element.add(0);
         data.add("Wi-Fi module");
         checked.add(2);
+        element.add(0);
         data.add("Collision avoidance module");
         checked.add(2);
+        element.add(0);
         data.add("Sound module");
         checked.add(1);
+        element.add(1);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        binding.recyclerView.setAdapter(new MyCFGAdapter(data, checked));
+        binding.recyclerView.setAdapter(new MyCFGAdapter(data, checked, element));
         return root;
     }
 

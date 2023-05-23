@@ -19,9 +19,12 @@ public class MyCFGAdapter extends RecyclerView.Adapter<MyCFGAdapter.MyHolder> {
     List<String> data;
     List<Integer> checked;
 
-    public MyCFGAdapter(List<String> data, List<Integer> checked) {
+    List<Integer> element;
+
+    public MyCFGAdapter(List<String> data, List<Integer> checked, List<Integer> element) {
         this.data = data;
         this.checked = checked;
+        this.element = element;
     }
 
     @Override
@@ -33,6 +36,7 @@ public class MyCFGAdapter extends RecyclerView.Adapter<MyCFGAdapter.MyHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         holder.title.setText(data.get(position));
+        if (element.get(position)==1) holder.required_element.setText("Optional element");
         if (checked.get(position) == 2) {
             holder.title_switch.setChecked(true);
             holder.title_switch.setClickable(false);
@@ -57,11 +61,14 @@ public class MyCFGAdapter extends RecyclerView.Adapter<MyCFGAdapter.MyHolder> {
 
         public View item;
 
+        public TextView required_element;
+
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title);
             title_switch = itemView.findViewById(R.id.title_switch);
             item = itemView.findViewById(R.id.item);
+            required_element = itemView.findViewById(R.id.required_element);
         }
     }
 }
