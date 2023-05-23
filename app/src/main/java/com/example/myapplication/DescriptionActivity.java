@@ -86,7 +86,7 @@ public class DescriptionActivity extends AppCompatActivity {
         if (a == 2) binding.yandexMarket.setImageResource(R.drawable.iarduino);
         if (a == 11) binding.yandexMarket.setImageResource(R.drawable.yourduino);
         binding.telegram.setOnClickListener(view -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/weanyhaha"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/retyre535"));
             view.getContext().startActivity(browserIntent);
         });
         binding.yandexMarket.setOnClickListener(view -> {
