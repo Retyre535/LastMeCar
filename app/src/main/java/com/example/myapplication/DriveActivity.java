@@ -39,10 +39,10 @@ public class DriveActivity extends AppCompatActivity {
             Thread thread4 = new Thread(new MyThread4());
             thread4.start();
         });
-        binding.play.setOnClickListener(view -> {
+        /*binding.play.setOnClickListener(view -> {
             Thread thread5 = new Thread(new MyThread5());
             thread5.start();
-        });
+        });*/
         binding.brake.setOnClickListener(view -> {
             Thread thread6 = new Thread(new MyThread6());
             thread6.start();

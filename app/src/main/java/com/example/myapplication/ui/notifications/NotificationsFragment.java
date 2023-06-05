@@ -45,8 +45,8 @@ public class NotificationsFragment extends Fragment {
         checked.add(2);
         element.add(0);
         data.add("Sound module");
-        checked.add(1);
-        element.add(1);
+        checked.add(2);
+        element.add(0);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
         binding.recyclerView.setAdapter(new MyCFGAdapter(data, checked, element));
         return root;
